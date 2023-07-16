@@ -1,7 +1,7 @@
 const mongoose = require("mongoose"); // Erase if already required
 
 // Declare the Schema of the Mongo model
-var doctorSchema = new mongoose.Schema(
+var userSchema = new mongoose.Schema(
   {
     name: {
       type: String,
@@ -27,11 +27,15 @@ var doctorSchema = new mongoose.Schema(
       required: true,
       unique: true,
     },
+    role:{
+      type:String,
+      required:true
+    }
   },
 
   { timestamps: true }
 );
 
 //Export the model
-const Doctor = mongoose.model("Doctor", doctorSchema);
-module.exports = Doctor;
+const User = mongoose.model("user", userSchema);
+module.exports = User;

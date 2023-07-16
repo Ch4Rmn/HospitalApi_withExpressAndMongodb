@@ -21,7 +21,7 @@ var deparmentSchema = new mongoose.Schema({
   doctorId: {
     type: mongoose.Schema.Types.ObjectId,
     require: true,
-    ref: "Doctor",
+    ref: "User",
   },
 });
 

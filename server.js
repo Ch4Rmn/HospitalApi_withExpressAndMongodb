@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const port = 4004;
 const db = require("./lib/db.js");
-const doctorRouter = require("./routes/doctorRoute.js");
+const userRouter = require("./routes/userRoute.js");
 const deparmentRouter = require("./routes/deparmentRoute.js");
 
 app.use(express.json());
@@ -13,7 +13,7 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use("/api/v1/doctor", doctorRouter);
+app.use("/api/v1/user", userRouter);
 app.use("/api/v1/deparment", deparmentRouter);
 
 app.get("/", (req, res) =>
