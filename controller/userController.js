@@ -24,6 +24,8 @@ const registerUser = async (req, res) => {
       });
 
       const token = jwt.sign({ email: Users.email, id: Users._id }, secret_key);
+
+
       console.log("Token is " + token);
 
       res.status(200).json({

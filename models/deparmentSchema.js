@@ -8,7 +8,7 @@ var deparmentSchema = new mongoose.Schema({
     unique: true,
     index: true,
   },
-  Description: {
+  service: {
     type: String,
     required: true,
   },
@@ -18,11 +18,12 @@ var deparmentSchema = new mongoose.Schema({
     required: true,
   },
 
-  doctorId: {
-    type: mongoose.Schema.Types.ObjectId,
-    require: true,
-    ref: "User",
-  },
+  userId : {
+    type:mongoose.Schema.Types.ObjectId,
+    ref:"User",
+    required:true
+  }
+
 });
 
 //Export the model
