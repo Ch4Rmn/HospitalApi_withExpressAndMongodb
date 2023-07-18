@@ -14,10 +14,10 @@ deparmentRouter.get("", auth, getAllDeparment);
 
 deparmentRouter.post("", auth, addDeparment);
 
-deparmentRouter.get("/:id", getDeparment);
+deparmentRouter.get("/:id",auth, getDeparment);
 
-deparmentRouter.put("/:id", updateDeperment);
+deparmentRouter.put("/:id",auth, updateDeperment);
 
-deparmentRouter.delete("/:id", deleteDeparment);
+deparmentRouter.delete("/:id",auth, deleteDeparment);
 
 module.exports = deparmentRouter;
